@@ -46,6 +46,7 @@
     <Compile Include="ECSTest.cs" />
     <Compile Include="FakeHeater.cs" />
     <Compile Include="HeaterTest.cs" />
+    <Compile Include="MainTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FakeTempSensor.cs" />
     <Compile Include="SensorTest.cs" />
