@@ -9,7 +9,7 @@ namespace ECS.Legacy
     public class Window : IWindow
     {
         public int Threshold { private get; set; }
-        public bool WindowOpen { get; private set; } = false;
+        public bool WindowOpen { get; private set; }
 
         public Window(int threshold = 0)
         {
