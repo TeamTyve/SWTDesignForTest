@@ -21,5 +21,11 @@ namespace ECS.Legacy.Unit.Test
         {
             Assert.That(2 + 2, Is.EqualTo(4));
         }
+
+        [Test]
+        public void Add3()
+        {
+            Assert.That(2 + 2, Is.EqualTo(4));
+        }
     }
 }
