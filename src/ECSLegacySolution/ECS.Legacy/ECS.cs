@@ -2,35 +2,45 @@
 {
     public class ECS : IECS
     {
-        private int _threshold;
+        public int Threshold { get; set; }
         private readonly ITempSensor _tempSensor;
         private readonly IHeater _heater;
+        private readonly IWindow _window;
 
-        public ECS(int thr, ITempSensor tempSensor, IHeater heater)
+        public ECS(int thr, ITempSensor tempSensor, IHeater heater, IWindow window)
         {
-            SetThreshold(thr);
             _tempSensor = tempSensor;
             _heater = heater;
+            _window = window;
+
+            SetThreshold(thr);
         }
 
         public void Regulate()
         {
             var t = _tempSensor.GetTemp();
-            if (t < _threshold)
+            if (t < Threshold)
+            {
                 _heater.TurnOn();
+            }
             else
+            {
                 _heater.TurnOff();
+            }
+
+            _window.WindowCtrl(GetCurTemp());
 
         }
 
         public void SetThreshold(int thr)
         {
-            _threshold = thr;
+            Threshold = thr;
+            _window.Threshold = thr;
         }
 
         public int GetThreshold()
         {
-            return _threshold;
+            return Threshold;
         }
 
         public int GetCurTemp()
