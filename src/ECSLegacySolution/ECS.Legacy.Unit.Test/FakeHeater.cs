@@ -1,15 +1,17 @@
-﻿namespace ECS.Legacy
+﻿namespace ECS.Legacy.Unit.Test
 {
-    public class Heater : IHeater
+    public class FakeHeater : IHeater
     {
+        public bool TurnedOn { get; set; }
+
         public void TurnOn()
         {
-            System.Console.WriteLine("Heater is on");
+            TurnedOn = true;
         }
 
         public void TurnOff()
         {
-            System.Console.WriteLine("Heater is off");
+            TurnedOn = false;
         }
 
         public bool RunSelfTest()

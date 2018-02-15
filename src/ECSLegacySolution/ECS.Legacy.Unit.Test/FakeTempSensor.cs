@@ -7,15 +7,16 @@ using NUnit.Framework;
 
 namespace ECS.Legacy.Unit.Test
 {
-    [TestFixture]
-    public class EcsLegacyTest
+    public class FakeTempSensor : ITempSensor
     {
-        [Test]
-        public void Heater_RunSelfTest_NoThrow()
+        public int GetTemp()
         {
-            var uut = new Heater();
+            return 25;
+        }
 
-            Assert.That(uut.RunSelfTest(), Is.True);
+        public bool RunSelfTest()
+        {
+            return true;
         }
     }
 }
