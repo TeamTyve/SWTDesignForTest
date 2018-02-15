@@ -27,5 +27,13 @@ namespace ECS.Legacy.Unit.Test
         {
             Assert.That(2 + 2, Is.EqualTo(4));
         }
+
+        [Test]
+        public void Heater_RunSelfTest_NoThrow()
+        {
+            var uut = new Heater();
+
+            Assert.That(uut.RunSelfTest(), Is.True);
+        }
     }
 }
