@@ -1,7 +1,7 @@
-﻿namespace ECS.Legacy
+﻿using System.Runtime.CompilerServices;
+
+namespace ECS.Legacy
 {
-
-
     internal class TempSensor : ITempSensor
     {
         public int GetTemp()
