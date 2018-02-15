@@ -11,24 +11,6 @@ namespace ECS.Legacy.Unit.Test
     public class EcsLegacyTest
     {
         [Test]
-        public void Add()
-        {
-            Assert.That(2+2, Is.EqualTo(4));
-        }
-
-        [Test]
-        public void Add2()
-        {
-            Assert.That(2 + 2, Is.EqualTo(4));
-        }
-
-        [Test]
-        public void Add3()
-        {
-            Assert.That(2 + 2, Is.EqualTo(4));
-        }
-
-        [Test]
         public void Heater_RunSelfTest_NoThrow()
         {
             var uut = new Heater();
